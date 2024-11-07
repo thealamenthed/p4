@@ -10,7 +10,7 @@
 ---
 
 ### Introduction
-Ce projet a pour objectif de développer une application web en utilisant uniquement du **CSS personnalisé** et du **JavaScript Vanilla**, sans librairies supplémentaires (comme jQuery ou Bootstrap). Vous êtes invité à cloner ce projet pour y apporter des modifications et compléter les fonctionnalités spécifiées.
+Ce projet a pour objectif de développer une application web en utilisant uniquement du **CSS personnalisé** et du **JavaScript Vanilla**, sans librairies supplémentaires (comme jQuery ou Bootstrap).
 
 ### Installation
 1. Forkez ce repo ;
