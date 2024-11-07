@@ -2,7 +2,7 @@
 
 ## Table des matières
 1. [Introduction](#introduction)
-2. [Installation](#installation)
+2. [Contraintes techniques](#contraintes-techniques)
 3. [Instructions pour le développement](#instructions-pour-le-développement)
 4. [Issues et Tâches](#issues-et-tâches)
 5. [Maquette](#maquette)
@@ -12,15 +12,15 @@
 ### Introduction
 Ce projet a pour objectif de développer une application web en utilisant uniquement du **CSS personnalisé** et du **JavaScript Vanilla**, sans librairies supplémentaires (comme jQuery ou Bootstrap).
 
-### Installation
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+### Contraintes techniques
+- Travailler sur un repo GitHub forké
+- Il n'y a aucune dépendance
+- Que du CSS / JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
 
 ### Instructions pour le développement
 - Ce projet doit être développé sans librairies externes. Utilisez uniquement du **JavaScript Vanilla** et du **CSS personnalisé**.
 - Évitez l'utilisation de frameworks ou librairies de styles comme Bootstrap.
+- Ajouter le code JavaScript manquant pour que le formulaire soit pleinement fonctionnel
 
 ### Issues et Tâches
 Voici les principales issues et tâches associées au projet : [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues) 
