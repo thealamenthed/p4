@@ -23,7 +23,7 @@ Ce projet a pour objectif de développer une application web en utilisant unique
 - Évitez l'utilisation de frameworks ou librairies de styles comme Bootstrap.
 
 ### Issues et Tâches
-Voici les principales issues et tâches associées au projet. Vous pouvez également consulter la page des [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues) pour obtenir plus d'informations et soumettre des rapports de bugs ou des suggestions d'amélioration.
+Voici les principales issues et tâches associées au projet : [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues) 
 
 #### TODO 1 : Fermer la modale
 - Ajouter la fonctionnalité de fermeture de la modale au bouton "X".
