@@ -3,53 +3,48 @@
 ## Table des matières
 1. [Introduction](#introduction)
 2. [Contraintes techniques](#contraintes-techniques)
-3. [Instructions pour le développement](#instructions-pour-le-développement)
+3. [Instructions de développement](#instructions-de-développement)
 4. [Issues et Tâches](#issues-et-tâches)
 5. [Maquette](#maquette)
 
 ---
 
 ### Introduction
-Ce projet a pour objectif de développer une application web en utilisant uniquement du **CSS personnalisé** et du **JavaScript Vanilla**, sans librairies supplémentaires (comme jQuery ou Bootstrap).
+Le projet **GameOn** consiste à développer une application web utilisant uniquement du **CSS** et du **JavaScript Vanilla**, sans frameworks ou librairies externes (comme jQuery ou Bootstrap).
 
 ### Contraintes techniques
-- Travailler sur un repo GitHub forké
-- Il n'y a aucune dépendance
-- Que du CSS / JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+- Travailler sur un dépôt GitHub forké.
+- Pas de dépendances supplémentaires.
+- Utiliser exclusivement du **JavaScript Vanilla** et du **CSS personnalisé**.
 
-### Instructions pour le développement
-- Ce projet doit être développé sans librairies externes. Utilisez uniquement du **JavaScript Vanilla** et du **CSS personnalisé**.
-- Évitez l'utilisation de frameworks ou librairies de styles comme Bootstrap.
-- Ajouter le code JavaScript manquant pour que le formulaire soit pleinement fonctionnel
+### Instructions de développement
+- Ne pas utiliser de frameworks ni de librairies externes.
+- Assurez-vous que le formulaire est pleinement fonctionnel en ajoutant le code JavaScript nécessaire.
 
 ### Issues et Tâches
-Voici les principales issues et tâches associées au projet : [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues) 
+Les issues et tâches principales du projet sont listées sur GitHub : [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues).
 
 #### TODO 1 : Fermer la modale
 - Ajouter la fonctionnalité de fermeture de la modale au bouton "X".
 
-#### TODO 2 : Implémenter les entrées du formulaire
-1. Relier les labels aux champs d'entrée dans le HTML en utilisant les attributs `for` et `id` pour une meilleure accessibilité.
-2. Implémenter la validation du formulaire en **JavaScript pur** afin d'assurer que :
-   - Le formulaire est valide lorsque l'utilisateur clique sur "Submit".
-   - Les données sont correctement saisies selon les critères suivants :
-     - **Prénom** : minimum 2 caractères et non vide.
-     - **Nom** : minimum 2 caractères et non vide.
-     - **Adresse électronique** : format valide.
-     - **Nombre de concours** : valeur numérique.
-     - **Bouton radio** : au moins une option sélectionnée.
-     - **Conditions générales** : case cochée (l'autre case est facultative).
-   - Conserver les données du formulaire pour ne pas effacer les champs qui ne passent pas la validation.
+#### TODO 2 : Validation du formulaire
+1. Lier les labels aux champs d'entrée en utilisant les attributs `for` et `id`.
+2. Implémenter la validation du formulaire en JavaScript, avec les critères suivants :
+   - **Prénom** : minimum 2 caractères, non vide.
+   - **Nom** : minimum 2 caractères, non vide.
+   - **Email** : format valide.
+   - **Nombre de concours** : valeur numérique.
+   - **Bouton radio** : une option sélectionnée.
+   - **Conditions générales** : case cochée (l'autre case est facultative).
+   - Conserver les données du formulaire en cas d'échec de validation.
 
-#### TODO 3 : Ajouter validation et messages d'erreur
-- Des messages d'erreur spécifiques doivent apparaître sous les champs incorrects :
-  - Par exemple :
-    - "Veuillez entrer 2 caractères ou plus pour le champ du nom."
-    - "Vous devez choisir une option."
-    - "Vous devez vérifier que vous acceptez les termes et conditions."
-    - "Vous devez entrer votre date de naissance."
+#### TODO 3 : Messages d'erreur
+- Afficher des messages d'erreur spécifiques sous les champs incorrects, par exemple :
+  - "Veuillez entrer 2 caractères ou plus pour le champ du nom."
+  - "Vous devez choisir une option."
+  - "Vous devez accepter les termes et conditions."
 
 ### Maquette
-[Maquette](https://www.figma.com/file/prxFGnSUoEhk6PTcMaJQim/UI-Design-GameOn-EN)
+La maquette du projet est disponible sur [Figma](https://www.figma.com/file/prxFGnSUoEhk6PTcMaJQim/UI-Design-GameOn-EN).
 
-[![GameOn](https://user.oc-static.com/upload/2020/08/14/15974189716945_image2.png "GameOn")](https://user.oc-static.com/upload/2020/08/14/15974189716945_image2.png "GameOn")
+[![GameOn](https://user.oc-static.com/upload/2020/08/14/15974189716945_image2.png "GameOn")](https://www.figma.com/file/prxFGnSUoEhk6PTcMaJQim/UI-Design-GameOn-EN)
