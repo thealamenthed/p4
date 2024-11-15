@@ -1,4 +1,4 @@
-# Projet GameOn
+#  🚀 Projet GameOn
 
 ## Table des matières
 1. [Introduction](#introduction)
