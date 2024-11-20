@@ -25,11 +25,11 @@ Le projet **GameOn** consiste à développer une application web utilisant uniqu
 Les issues et tâches principales du projet sont listées sur GitHub : [Issues sur GitHub](https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/issues).
 
 #### TODO 1 : Fermer la modale
-- Ajouter la fonctionnalité de fermeture de la modale au bouton "X".
+-   [ ] Ajouter la fonctionnalité de fermeture de la modale au bouton "X".
 
 #### TODO 2 : Validation du formulaire
-1. Lier les labels aux champs d'entrée en utilisant les attributs `for` et `id`.
-2. Implémenter la validation du formulaire en JavaScript, avec les critères suivants :
+-   [ ] 1. Lier les labels aux champs d'entrée en utilisant les attributs `for` et `id`.
+-   [ ] 2. Implémenter la validation du formulaire en JavaScript, avec les critères suivants :
    - **Prénom** : minimum 2 caractères, non vide.
    - **Nom** : minimum 2 caractères, non vide.
    - **Email** : format valide.
@@ -39,10 +39,10 @@ Les issues et tâches principales du projet sont listées sur GitHub : [Issues s
    - Conserver les données du formulaire en cas d'échec de validation.
 
 #### TODO 3 : Messages d'erreur
-- Afficher des messages d'erreur spécifiques sous les champs incorrects, par exemple :
-  - "Veuillez entrer 2 caractères ou plus pour le champ du nom."
-  - "Vous devez choisir une option."
-  - "Vous devez accepter les termes et conditions."
+-   [ ] Afficher des messages d'erreur spécifiques sous les champs incorrects, par exemple :
+-   [ ]"Veuillez entrer 2 caractères ou plus pour le champ du nom."
+-   [ ] "Vous devez choisir une option."
+-   [ ]"Vous devez accepter les termes et conditions."
 
 ### Maquette
 La maquette du projet est disponible sur [Figma](https://www.figma.com/file/prxFGnSUoEhk6PTcMaJQim/UI-Design-GameOn-EN).
