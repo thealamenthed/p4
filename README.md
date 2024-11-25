@@ -35,8 +35,8 @@ Les issues et tâches principales du projet sont listées sur GitHub : [Issues s
 
 #### TODO 2 : Validation du formulaire
 
-- [ ] 1. Lier les labels aux champs d'entrée en utilisant les attributs `for` et `id`.
-- [ ] 2. Implémenter la validation du formulaire en JavaScript, avec les critères suivants :
+- [x] 1. Lier les labels aux champs d'entrée en utilisant les attributs `for` et `id`.
+- [x] 2. Implémenter la validation du formulaire en JavaScript, avec les critères suivants :
 - **Prénom** : minimum 2 caractères, non vide.
 - **Nom** : minimum 2 caractères, non vide.
 - **Email** : format valide.
