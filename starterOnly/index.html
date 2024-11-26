@@ -64,12 +64,14 @@
                   name="first"
                   minlength="2" />
                 <br />
+                <span class="errorMessage"></span>
               </div>
               <div class="formData">
                 <label for="last">Nom</label>
                 <br />
                 <input class="text-control" type="text" id="last" name="last" />
                 <br />
+                <span class="errorMessage"></span>
               </div>
 
               <div class="formData">
@@ -81,6 +83,7 @@
                   id="email"
                   name="email" />
                 <br />
+                <span class="errorMessage"></span>
               </div>
 
               <div class="formData">
@@ -92,6 +95,7 @@
                   id="birthdate"
                   name="birthdate" />
                 <br />
+                <span class="errorMessage"></span>
               </div>
               <div class="formData">
                 <label for="quantity">
@@ -105,6 +109,7 @@
                   name="quantity"
                   min="0"
                   max="99" />
+                <span class="errorMessage"></span>
               </div>
               <p class="text-label">
                 A quel tournoi souhaitez-vous participer cette année ?
@@ -170,6 +175,8 @@
                   <span class="checkbox-icon"></span>
                   Portland
                 </label>
+                <br />
+                <span class="errorMessage"></span>
               </div>
 
               <div class="formData">
@@ -183,6 +190,7 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br />
+                <span class="errorMessage"></span>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
@@ -196,7 +204,6 @@
                 class="button"
                 value="C'est parti" />
             </form>
-            <div id="errorMessages"></div>
           </div>
         </div>
       </div>
