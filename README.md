@@ -54,7 +54,7 @@ Les issues et tâches principales du projet sont listées sur GitHub : [Issues s
 
 #### TODO 4 : Ajout d'un message de confirmation quand envoi est réussi
 
-- [] Après une validation réussie, inclure un message de confirmation de la soumission réussie pour l'utilisateur (ex. "Merci ! Votre réservation a été reçue.")
+- [ ] Après une validation réussie, inclure un message de confirmation de la soumission réussie pour l'utilisateur (ex. "Merci ! Votre réservation a été reçue.")
 
 
 ### Maquette
