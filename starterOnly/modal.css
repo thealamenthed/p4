@@ -84,6 +84,16 @@ img {
   }
 }
 
+span.errorMessage {
+  font-size: 0.5em;
+  color: #fe142f;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: left;
+  line-height: 0.3;
+}
+
 @media screen and (max-width: 768px) {
   .topnav.responsive {
     position: relative;
