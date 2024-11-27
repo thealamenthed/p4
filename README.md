@@ -47,10 +47,15 @@ Les issues et tâches principales du projet sont listées sur GitHub : [Issues s
 
 #### TODO 3 : Messages d'erreur
 
-- [ ] Afficher des messages d'erreur spécifiques sous les champs incorrects, par exemple :
-- [ ] "Veuillez entrer 2 caractères ou plus pour le champ du nom."
-- [ ] "Vous devez choisir une option."
-- [ ] "Vous devez accepter les termes et conditions."
+- [x] Afficher des messages d'erreur spécifiques sous les champs incorrects, par exemple :
+- [x] "Veuillez entrer 2 caractères ou plus pour le champ du nom."
+- [x] "Vous devez choisir une option."
+- [x] "Vous devez accepter les termes et conditions."
+
+#### TODO 4 : Ajout d'un message de confirmation quand envoi est réussi
+
+- [] Après une validation réussie, inclure un message de confirmation de la soumission réussie pour l'utilisateur (ex. "Merci ! Votre réservation a été reçue.")
+
 
 ### Maquette
 
