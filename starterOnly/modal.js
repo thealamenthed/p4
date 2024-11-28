@@ -1,3 +1,4 @@
+// Activer/désactiver le mode "responsive" dans la navigation
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -7,39 +8,29 @@ function editNav() {
   }
 }
 
-// DOM Elements
+// Eléments DOM
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalCloseBtn = document.querySelector(".close");
 
-// launch modal event
+// Evénement "click" pour chaque bouton qui ouvre la modal
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// close modal event
+// Evénement "click" pour le bouton qui ferme la modal
 modalCloseBtn.addEventListener("click", closeModal);
 
-// launch modal form
+// Afficher la modal
 function launchModal() {
   modalbg.style.display = "block";
+  sendMessage.style.display = "none";
+  form.style.display = "block";
 }
 
-// close modal form
+// Fermer la modal
 function closeModal() {
   modalbg.style.display = "none";
 }
-
-/* 
-1.Écouter l'événement submit sur le formulaire
-2.Empêcher l'envoi du formulaire si les conditions ne sont pas respectées
-3.Vérifier chaque condition de validation et afficher un message d'erreur si nécessaire
-4.Conserver les données saisies même si la validation échoue
-
-Ajouter le message d'erreur sous l'input :
-1.Cibler la zone ou le message doit etre afficher
-2.Vider tous les span errorMessage
-3.Afficher un à un
-*/
 
 // Gestion de l'événement submit sur le formulaire
 let form = document.querySelector("form");
@@ -61,34 +52,47 @@ form.addEventListener("submit", (event) => {
   const quantity = document.getElementById("quantity");
   const locationChecked = document.querySelectorAll('input[name="location"]');
   const checkboxCondition = document.getElementById("checkbox1");
+  const sendMessage = document.getElementById("sendMessage");
+  const content = document.querySelector(".content");
 
-  const isValid = true;
+  // Initialisation du compteur de validations
+  let inputsValid = 0;
 
-  // Vérifier chaque condition de validation et afficher un message d'erreur
+  // Vérification des champs du formulaire
   if (prenom.value.trim().length < 2) {
     prenom.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer 2 caractères ou plus pour le champ du prénom";
+  } else {
+    inputsValid++;
   }
 
   if (nom.value.trim().length < 2) {
     nom.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer 2 caractères ou plus pour le champ du nom";
+  } else {
+    inputsValid++;
   }
 
   const emailRegex = /[a-z0-9.-_]+@[a-z0-9.-_]+\.[a-z0-9.-_]+/;
   if (!emailRegex.test(email.value.trim())) {
     email.closest(".formData").querySelector(".errorMessage").innerHTML =
       "L'email n'est pas valide";
+  } else {
+    inputsValid++;
   }
 
   if (!birthdate.value) {
     birthdate.closest(".formData").querySelector(".errorMessage").innerHTML =
-      "Veuillez entrer une date de naissance valide (mois/jour/année)";
+      "Veuillez entrer une date de naissance valide (jour/mois/année)";
+  } else {
+    inputsValid++;
   }
 
   if (quantity.value.length <= 0) {
     quantity.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer un nombre en chiffres";
+  } else {
+    inputsValid++;
   }
 
   let checkedFalse = 0;
@@ -97,11 +101,12 @@ form.addEventListener("submit", (event) => {
       checkedFalse++;
     }
   }
-
   if (checkedFalse === locationChecked.length) {
     locationChecked[0]
       .closest(".formData")
       .querySelector(".errorMessage").innerHTML = "Veuillez choisir un tournoi";
+  } else {
+    inputsValid++;
   }
 
   if (!checkboxCondition.checked) {
@@ -109,9 +114,13 @@ form.addEventListener("submit", (event) => {
       .closest(".formData")
       .querySelector(".errorMessage").innerHTML =
       "Vous devez vérifier que vous acceptez les termes et conditions";
+  } else {
+    inputsValid++;
   }
-
-  // if (isValid === true) {
-  //   alert("ok");
-  // }
+  // Si toutes les validations sont correctes
+  if (inputsValid === 7) {
+    form.style.display = "none";
+    sendMessage.style.display = "block";
+    content.style.top = "230px";
+  }
 });

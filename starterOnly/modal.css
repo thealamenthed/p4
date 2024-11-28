@@ -94,6 +94,10 @@ span.errorMessage {
   line-height: 0.3;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .topnav.responsive {
     position: relative;
@@ -206,6 +210,11 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+
+}
+
+#sendMessage {
+  display: none;
 }
 
 .modal-body {
@@ -257,8 +266,8 @@ input {
   border: 2px solid #e54858;
 }
 
-/* 
-input[data-error]::after {
+
+/* input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
