@@ -137,11 +137,6 @@ main {
   align-items: center;
 }
 
-.buttonModalSendMessage {
-  width: 182px;
-  text-align: center;
-
-}
 
 .button {
   background: #fe142f;
@@ -155,6 +150,12 @@ main {
 
 .button:hover {
   background: #3876ac;
+}
+
+.buttonModalSendMessage {
+  width: 182px;
+  text-align: center;
+  margin-top: 14em;
 }
 
 .smFont {
