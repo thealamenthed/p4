@@ -18,8 +18,7 @@
         <img alt="logo" src="Logo.png" width="auto" height="auto" />
       </div>
       <div class="main-navbar">
-        <a href="#" class="active"><span>Accueil</span></a>
-        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#" class="active"><span>Détails de l'évènement</span></a>
         <a href="#"><span>À propos</span></a>
         <a href="#"><span>Contact</span></a>
         <a href="#"><span>Évènements passés</span></a>
@@ -28,6 +27,7 @@
         </a>
       </div>
     </div>
+
     <main>
       <div class="hero-section">
         <div class="hero-content">
@@ -62,14 +62,20 @@
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2" />
+                  minlength="2"
+                  value="John" />
                 <br />
                 <span class="errorMessage"></span>
               </div>
               <div class="formData">
                 <label for="last">Nom</label>
                 <br />
-                <input class="text-control" type="text" id="last" name="last" />
+                <input
+                  class="text-control"
+                  type="text"
+                  id="last"
+                  name="last"
+                  value="Doe" />
                 <br />
                 <span class="errorMessage"></span>
               </div>
@@ -81,7 +87,8 @@
                   class="text-control"
                   type="email"
                   id="email"
-                  name="email" />
+                  name="email"
+                  value="John@Doe.fr" />
                 <br />
                 <span class="errorMessage"></span>
               </div>
@@ -120,7 +127,8 @@
                   type="radio"
                   id="location1"
                   name="location"
-                  value="New York" />
+                  value="New York"
+                  checked />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
                   New York
@@ -184,7 +192,8 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  required />
+                  checked />
+
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
@@ -204,11 +213,15 @@
                 class="button"
                 value="C'est parti" />
             </form>
-            <div id="sendMessage">Merci ! Votre réservation a été reçue.</div>
+            <div class="modalSendMessage">
+              <div id="sendMessage">Merci pour votre inscription</div>
+              <div class="button buttonModalSendMessage">Fermer</div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
     <footer>
       <p class="copyrights">Copyright 2014 - 2022, GameOn Inc.</p>
     </footer>

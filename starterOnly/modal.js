@@ -13,18 +13,23 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalCloseBtn = document.querySelector(".close");
+const buttonModalSendMessage = document.querySelector(
+  ".buttonModalSendMessage"
+);
 
 // Evénement "click" pour chaque bouton qui ouvre la modal
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // Evénement "click" pour le bouton qui ferme la modal
 modalCloseBtn.addEventListener("click", closeModal);
+buttonModalSendMessage.addEventListener("click", closeModal);
 
 // Afficher la modal
 function launchModal() {
   modalbg.style.display = "block";
   sendMessage.style.display = "none";
   form.style.display = "block";
+  buttonModalSendMessage.style.display = "none";
 }
 
 // Fermer la modal
@@ -39,10 +44,13 @@ form.addEventListener("submit", (event) => {
 
   // Réinitialiser les messages d'erreurs
   const errorMessages = document.querySelectorAll(".errorMessage");
+  const inputs = document.querySelectorAll(".text-control");
 
   for (i = 0; i < errorMessages.length; i++) {
     errorMessages[i].innerHTML = "";
   }
+
+  inputs.forEach((input) => input.classList.remove("error"));
 
   // Collecter les données du formulaire
   const prenom = document.getElementById("first");
@@ -62,6 +70,7 @@ form.addEventListener("submit", (event) => {
   if (prenom.value.trim().length < 2) {
     prenom.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer 2 caractères ou plus pour le champ du prénom";
+    prenom.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -69,6 +78,7 @@ form.addEventListener("submit", (event) => {
   if (nom.value.trim().length < 2) {
     nom.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer 2 caractères ou plus pour le champ du nom";
+    nom.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -77,6 +87,7 @@ form.addEventListener("submit", (event) => {
   if (!emailRegex.test(email.value.trim())) {
     email.closest(".formData").querySelector(".errorMessage").innerHTML =
       "L'email n'est pas valide";
+    email.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -84,6 +95,7 @@ form.addEventListener("submit", (event) => {
   if (!birthdate.value) {
     birthdate.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer une date de naissance valide (jour/mois/année)";
+    birthdate.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -91,6 +103,7 @@ form.addEventListener("submit", (event) => {
   if (quantity.value.length <= 0) {
     quantity.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer un nombre en chiffres";
+    quantity.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -105,6 +118,7 @@ form.addEventListener("submit", (event) => {
     locationChecked[0]
       .closest(".formData")
       .querySelector(".errorMessage").innerHTML = "Veuillez choisir un tournoi";
+    locationChecked[0].classList.add("error");
   } else {
     inputsValid++;
   }
@@ -114,6 +128,7 @@ form.addEventListener("submit", (event) => {
       .closest(".formData")
       .querySelector(".errorMessage").innerHTML =
       "Vous devez vérifier que vous acceptez les termes et conditions";
+    checkboxCondition.classList.add("error");
   } else {
     inputsValid++;
   }
@@ -121,6 +136,6 @@ form.addEventListener("submit", (event) => {
   if (inputsValid === 7) {
     form.style.display = "none";
     sendMessage.style.display = "block";
-    content.style.top = "230px";
+    buttonModalSendMessage.style.display = "block";
   }
 });
