@@ -1,4 +1,4 @@
-// Activer/désactiver le mode "responsive" dans la navigation
+// NavBar burger menu
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
