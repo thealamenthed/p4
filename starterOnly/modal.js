@@ -42,6 +42,10 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Bloque le comportement par défaut du navigateur
 
+  validForm();
+});
+
+function validForm() {
   // Réinitialise les messages d'erreurs
   const errorMessages = document.querySelectorAll(".errorMessage"); // Cible l'élement errorMessage
   const inputs = document.querySelectorAll(".text-control");
@@ -140,4 +144,4 @@ form.addEventListener("submit", (event) => {
     sendMessage.style.display = "block";
     buttonModalSendMessage.style.display = "block";
   }
-});
+}
