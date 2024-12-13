@@ -1,6 +1,6 @@
 // NavBar burger menu
 function editNav() {
-  var x = document.getElementById("myTopnav");
+  let x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
@@ -24,7 +24,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 modalCloseBtn.addEventListener("click", closeModal);
 buttonModalSendMessage.addEventListener("click", closeModal);
 
-// Afficher la modal
+// Affichage de la modal
 function launchModal() {
   modalbg.style.display = "block";
   sendMessage.style.display = "none";
@@ -32,7 +32,7 @@ function launchModal() {
   buttonModalSendMessage.style.display = "none";
 }
 
-// Fermer la modal
+// Fermeture de la modal
 function closeModal() {
   modalbg.style.display = "none";
 }
@@ -40,19 +40,20 @@ function closeModal() {
 // Gestion de l'événement submit sur le formulaire
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Bloque le comportement par défaut du navigateur
 
-  // Réinitialiser les messages d'erreurs
-  const errorMessages = document.querySelectorAll(".errorMessage");
+  // Réinitialise les messages d'erreurs
+  const errorMessages = document.querySelectorAll(".errorMessage"); // Cible l'élement errorMessage
   const inputs = document.querySelectorAll(".text-control");
 
+  // Efface les messages d'erreur
   for (i = 0; i < errorMessages.length; i++) {
     errorMessages[i].innerHTML = "";
   }
-
+  // Retire la classe d'erreur des champs
   inputs.forEach((input) => input.classList.remove("error"));
 
-  // Collecter les données du formulaire
+  // Collecte les données du formulaire
   const prenom = document.getElementById("first");
   const nom = document.getElementById("last");
   const email = document.getElementById("email");
@@ -68,6 +69,7 @@ form.addEventListener("submit", (event) => {
 
   // Vérification des champs du formulaire
   if (prenom.value.trim().length < 2) {
+    // J'utilise la fonction trim() pour ne pas prendre en compte les espaces
     prenom.closest(".formData").querySelector(".errorMessage").innerHTML =
       "Veuillez entrer 2 caractères ou plus pour le champ du prénom";
     prenom.classList.add("error");
@@ -83,7 +85,7 @@ form.addEventListener("submit", (event) => {
     inputsValid++;
   }
 
-  const emailRegex = /[a-z0-9.-_]+@[a-z0-9.-_]+\.[a-z0-9.-_]+/;
+  const emailRegex = /[a-z0-9.-_]+@[a-z0-9.-_]+\.[a-z]{2,4}$/;
   if (!emailRegex.test(email.value.trim())) {
     email.closest(".formData").querySelector(".errorMessage").innerHTML =
       "L'email n'est pas valide";

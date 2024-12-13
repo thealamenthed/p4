@@ -648,7 +648,7 @@ footer {
 
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 475px) {
 
   .topnav a {
     display: none;
